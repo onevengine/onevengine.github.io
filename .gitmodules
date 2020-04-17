@@ -1,3 +1,4 @@
 [submodule "themes/onevcat"]
 	path = themes/onevcat
-	url = git@github.com:onevengine/onevcat.git
+	url = https://github.com/onevengine/onevcat.git
+
