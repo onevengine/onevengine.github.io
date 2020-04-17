@@ -1,0 +1,9 @@
+<nav class="cover-navigation">
+    <ul class="navigation">
+        <% for (name in theme.menu) {%>
+        <li class="navigation__item">
+            <a href="<%- theme.menu[name] %>" class="blog-button"><%= name %></a>
+        </li>
+        <% } %>
+    </ul>
+</nav>

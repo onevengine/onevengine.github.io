@@ -1,0 +1,18 @@
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <div class="post-meta">
+            <time datetime="<%- date(page.date, 'YYYY-MM-DD') %>" itemprop="datePublished" class="post-meta__date date">
+                <%- date(page.date, "YYYY-MM-DD") %>
+            </time>
+            &#8226;
+            <span class="post-meta__tags tags">
+                <%- page.tags.data.map(function(v, i, a) { return v.name }).join(' ') %>
+            </span>
+        </div>
+        <h1 class="post-title"><%- page.title %></h1>
+    </header>
+
+    <section class="post">
+     <%- page.content %>
+    </section>
+</article>

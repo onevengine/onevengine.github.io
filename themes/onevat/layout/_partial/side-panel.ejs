@@ -1,0 +1,33 @@
+<header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+    <div class="panel-main">
+        <div class="panel-main__inner panel-inverted">
+            <div class="panel-main__content">
+                <a href="/">
+                    <img src="<%- url_for(theme.avatar) %>" width="80" class="panel-cover__logo logo" />
+                </a>
+                <h1 class="panel-cover__title panel-title">
+                    <a href="/">
+                        <%= theme.author %>
+                    </a>
+                </h1>
+                <span class="panel-cover__subtitle panel-subtitle">
+                    <%= theme.subtitle %>
+                </span>
+                <hr class="panel-cover__divider">
+                <p class="panel-cover__description">
+                    <%= theme.description %>
+                </p>
+                <hr class="panel-cover__divider panel-cover__divider--secondary">
+                <div class="navigation-wrapper">
+                    <div>
+                        <%- partial('_partial/navigation') %>
+                    </div>
+                    <div>
+                        <%- partial('_partial/social') %>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-cover--overlay cover-blue"></div>
+    </div>
+</header>

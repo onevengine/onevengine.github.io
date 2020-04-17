@@ -1,0 +1,16 @@
+avatar: /assets/images/avatar.jpeg
+author: Engine
+subtitle: 不折腾，不人生
+description: Hi，我是范涛 (@engine)，一名 iOS 开发者。
+
+menu:
+  博客: /
+  # 简历: /CV
+
+social:
+  email: mailto:bearclawr@163.com
+  github: https://github.com/heyor
+  rss:
+  twitter:
+  weibo:
+  

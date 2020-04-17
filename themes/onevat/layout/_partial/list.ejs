@@ -1,0 +1,35 @@
+<div class="main-post-list">
+
+    <ol class="post-list">
+        <% page.posts.each(function (post) { %>
+        <li>
+
+            <h2 class="post-list__post-title post-title">
+                <a href="<%- url_for(post.path) %>" title="访问 <%= post.title %>">
+                    <%= post.title %>
+                </a>
+            </h2>
+            <p class="excerpt">
+                <%- truncate(strip_html(post.excerpt || post.content ), {length: 100}) %>&hellip;
+            </p>
+            <div class="post-list__meta">
+                <time datetime="<%- date(post.date, 'YYYY-MM-DD') %>" class="post-list__meta--date date">
+                    <%- date(post.date, "YYYY-MM-DD") %>
+                </time>
+                &#8226;
+                <span class="post-list__meta--tags tags">
+                    <%- post.tags.data.map(function(v, i, a) { return v.name }).join(' ') %>
+                </span>
+                <a class="btn-border-small" href="<%- url_for(post.path) %>">
+                    继续阅读
+                </a>
+            </div>
+            <hr class="post-list__divider">
+
+        </li>
+        <% }) %>
+    </ol>
+
+    <%- partial('_partial/pagination') %>
+
+</div>
